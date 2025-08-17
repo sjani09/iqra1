@@ -587,23 +587,15 @@
             </div>
         </div>
 
-        <!-- Iqra Prediction Machine (Instead of Age Calculator!) -->
+        <!-- Iqra's Birthday Roast Machine -->
         <div class="age-calculator">
-            <h2 style="text-align: center; color: #333; margin-bottom: 20px;">🔮 Iqra's Birthday Fortune Teller 🔮</h2>
-            <p style="text-align: center; color: #666; font-size: 1.1em;">Click to reveal Iqra's hilarious birthday predictions!</p>
-            <div class="age-button-grid">
-                <button onclick="predictLove()">💕 Love Life</button>
-                <button onclick="predictBirthday()">🎂 Birthday Wishes</button>
-                <button onclick="predictFood()">🍕 Food Destiny</button>
-                <button onclick="predictSleep()">😴 Sleep Schedule</button>
-                <button onclick="predictParty()">🎉 Party Skills</button>
-                <button onclick="predictGoals()">🎯 Life Goals</button>
-                <button onclick="predictShopping()">🛍️ Shopping Habits</button>
-                <button onclick="predictCoffee()">☕ Coffee Addiction</button>
-                <button onclick="predictDancing()">🎵 Dancing Skills</button>
-                <button onclick="predictFashion()">👗 Fashion Sense</button>
-                <button onclick="predictDiet()">🍰 Diet Plans</button>
-                <button onclick="predictGifts()">🎁 Gift Reactions</button>
+            <h2 style="text-align: center; color: #333; margin-bottom: 20px;">🔥 Iqra's Birthday Roast-O-Matic 🔥</h2>
+            <p style="text-align: center; color: #666; font-size: 1.1em;">Warning: Savage mode activated! Click if you dare, Iqra!</p>
+            <div class="age-button-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 500px; margin: 20px auto;">
+                <button onclick="roastMorning()" style="background: linear-gradient(45deg, #ff6b6b, #ff8e53);">🌅 Morning Iqra</button>
+                <button onclick="roastFood()" style="background: linear-gradient(45deg, #4ecdc4, #44a3aa);">🍕 Hungry Iqra</button>
+                <button onclick="roastSocial()" style="background: linear-gradient(45deg, #f9ca24, #f0b90b);">📱 Social Iqra</button>
+                <button onclick="roastBirthday()" style="background: linear-gradient(45deg, #ff9ff3, #ee5a6f);">🎂 Birthday Iqra</button>
             </div>
             <p id="ageResult" style="text-align: center; color: #333; font-size: 1.2em; margin-top: 20px; min-height: 60px;"></p>
         </div>
@@ -772,9 +764,9 @@
             fact.classList.add('reveal-animation');
         }
 
-        // Separate Fortune Teller Functions for Each Category
-        function showPrediction(message) {
-            document.getElementById('ageResult').innerHTML = "🔮 " + message;
+        // Birthday Roast Functions - 4 Categories of Friendly Roasts!
+        function showRoast(message) {
+            document.getElementById('ageResult').innerHTML = "🔥 " + message;
             const resultBox = document.getElementById('ageResult');
             resultBox.style.animation = 'none';
             setTimeout(() => {
@@ -783,101 +775,39 @@
             throwConfetti();
         }
 
-        function predictLove() {
-            const messages = [
-                "💕 Iqra's love life update: She's in a committed relationship... with her bed! They have breakfast together every morning at noon! 🛏️❤️",
-                "💕 Breaking: Iqra will fall deeply in love this year... with a new pizza place that delivers at 2 AM! True love exists! 🍕💘"
+        function roastMorning() {
+            const roasts = [
+                "🌅 Iqra's morning routine: Set 10 alarms, snooze 11 times, wake up at noon, call it 'morning'. Time is just a social construct anyway! ⏰😴",
+                "🌅 Breaking: Iqra's definition of 'early morning' has been officially changed to 11:59 AM. The sun adjusts its schedule for her! ☀️",
+                "🌅 Scientists study Iqra to understand how someone can be 'just 5 more minutes' for 3 hours straight. Nobel Prize in Time Bending! 🛏️",
+                "🌅 Iqra's alarm clock filed for emotional abuse - it screams every morning but she just doesn't care! Savage! 📱😭"
             ];
-            showPrediction(messages[Math.floor(Math.random() * messages.length)]);
+            showRoast(roasts[Math.floor(Math.random() * roasts.length)]);
         }
 
-        function predictBirthday() {
-            const messages = [
-                "🎂 Happy Birthday to the girl who cuts the cake first and asks 'whose birthday is it?' later! Classic Iqra move! 🍰",
-                "🎂 Happy Birthday to the girl who blows out candles like she's training for the Olympics! World record incoming! 💨"
+        function roastFood() {
+            const roasts = [
+                "🍕 Iqra's relationship status with food: 'It's complicated'... by complicated she means she loves everything edible! No food is safe! 🍔❤️",
+                "🍕 Breaking: Local restaurants have Iqra's photo on the wall - not as customer of the month, but as 'Hide the free samples, she's coming!' 🏃‍♀️",
+                "🍕 Iqra's fitness journey: She runs... to the fridge. She does crunches... on chips. She lifts... forks to her mouth. Athletic queen! 💪🍰"
             ];
-            showPrediction(messages[Math.floor(Math.random() * messages.length)]);
+            showRoast(roasts[Math.floor(Math.random() * roasts.length)]);
         }
 
-        function predictFood() {
-            const messages = [
-                "🍕 Iqra's food superpower: She can hear a chip bag opening from 3 blocks away and smell pizza before it's even ordered! 🦸‍♀️",
-                "🍕 Breaking News: Iqra's favorite food group is 'Yes' - as in 'Yes, I'll have some!' Universal food acceptance! 🍴"
+        function roastSocial() {
+            const roasts = [
+                "📱 Iqra takes 100 selfies to post 1, then deletes it after 5 minutes because 'the lighting was weird'. Photography is hard! 🤳😅",
+                "📱 Breaking: Iqra responds to texts in 3-5 business days with 'Sorry just saw this!' - She saw it immediately, just forgot! 💬",
+                "📱 Iqra's social battery: 100% for 10 minutes, then suddenly needs to go home and watch Netflix. Introvert in extrovert's clothing! 📺"
             ];
-            showPrediction(messages[Math.floor(Math.random() * messages.length)]);
+            showRoast(roasts[Math.floor(Math.random() * roasts.length)]);
         }
 
-        function predictSleep() {
-            const messages = [
-                "😴 Iqra's sleep schedule: Goes to bed at 2 AM planning to wake up at 6 AM, actually wakes up at noon wondering where the day went! ⏰",
-                "😴 Iqra has mastered the ancient art of 'just 5 more minutes' - she can stretch it to 3 hours! Time manipulation skills! 🛏️",
-                "😴 Breaking: Iqra's bed has filed a missing person report - she promises to sleep early but Netflix keeps kidnapping her! 📺"
+        function roastBirthday() {
+            const roasts = [
+                "🎂 Plot twist: Iqra cuts the cake before singing ends because 'priorities'. The song is optional, cake is mandatory! 🍰🎵"
             ];
-            showPrediction(messages[Math.floor(Math.random() * messages.length)]);
-        }
-
-        function predictParty() {
-            const messages = [
-                "🎉 Iqra's party skill: Arriving exactly when the cake is being cut - it's not luck, it's a superpower! 🎂⏰",
-                "🎉 Iqra's party motto: 'I'm not late, everyone else is just extremely early!' Time is relative at parties! 🕐"
-            ];
-            showPrediction(messages[Math.floor(Math.random() * messages.length)]);
-        }
-
-        function predictGoals() {
-            const messages = [
-                "🎯 Iqra's life goal achieved: Successfully convinced everyone that being lazy is actually 'energy conservation'! Nobel Prize pending! 🏆",
-                "🎯 Breaking: Iqra sets new record - planned 50 things, accomplished 2, felt proud of 1! That's productivity! 📝",
-                "🎯 Iqra's biggest achievement: Mastering the art of looking busy while mentally planning what to eat next! 🤔🍕"
-            ];
-            showPrediction(messages[Math.floor(Math.random() * messages.length)]);
-        }
-
-        function predictShopping() {
-            const messages = [
-                "🛍️ Iqra's shopping style: Goes for milk, comes back with everything except milk! It's called 'creative shopping'! 🛒"
-            ];
-            showPrediction(messages[Math.floor(Math.random() * messages.length)]);
-        }
-
-        function predictCoffee() {
-            const messages = [
-                "☕ Scientists discover Iqra's blood type: Coffee Positive! She doesn't drink coffee, she absorbs it directly! ☕💉",
-                "☕ Iqra's morning ritual: 1st cup - to wake up, 2nd cup - to function, 3rd cup - to be nice to people! ☕☕☕"
-            ];
-            showPrediction(messages[Math.floor(Math.random() * messages.length)]);
-        }
-
-        function predictDancing() {
-            const messages = [
-                "🎵 Dance Floor Update: When Iqra dances, people don't know if she's having fun or needs medical attention! Both are correct! 💃"
-            ];
-            showPrediction(messages[Math.floor(Math.random() * messages.length)]);
-        }
-
-        function predictFashion() {
-            const messages = [
-                "👗 Breaking: Iqra owns 100 outfits but wears the same 3 on rotation! The rest are 'for special occasions' that never come! 👚",
-                "👗 Iqra's style icon: 'Comfort over Everything' - making messy buns and oversized hoodies look intentional since forever! ✨"
-            ];
-            showPrediction(messages[Math.floor(Math.random() * messages.length)]);
-        }
-
-        function predictDiet() {
-            const messages = [
-                "🍰 Iqra's diet plan: Monday - starts diet, Tuesday - thinks about diet, Wednesday - what diet? It's called balance! ⚖️",
-                "🍰 Breaking: Iqra discovered that if you eat cake really fast, the calories can't catch you! Science! 🏃‍♀️🎂"
-            ];
-            showPrediction(messages[Math.floor(Math.random() * messages.length)]);
-        }
-
-        function predictGifts() {
-            const messages = [
-                "🎁 Iqra's gift reaction is Oscar-worthy: Same expression for socks or diamonds - 'OMG THIS IS PERFECT!' 😍",
-                "🎁 Breaking: Iqra can shake a gift box and guess what's inside... she's always wrong but acts surprised anyway! 🎭",
-                "🎁 Iqra's gift philosophy: 'It's the thought that counts... but cash counts better!' Honest and practical! 💵"
-            ];
-            showPrediction(messages[Math.floor(Math.random() * messages.length)]);
+            showRoast(roasts[Math.floor(Math.random() * roasts.length)]);
         }
 
         // Change Photo Frame Emoji
@@ -989,15 +919,10 @@
         // Show Birthday Joke
         function showJoke() {
             const jokes = [
-                "Why does Iqra never forget her birthday? Because it's the one day she can act her shoe size, not her age! 👠",
-                "What's Iqra's favorite kind of birthday music? Heavy metal... because of all those candles! 🕯️😂",
-                "Why did Iqra's birthday cake go to therapy? It was having too many layers of emotions! 🎂😭",
-                "What did one of Iqra's birthday candles say to the other? 'Don't birthdays just burn you up?' 🔥",
                 "Why is Iqra like a fine wine? She gets better with age, but also gives everyone headaches the next day! 🍷",
                 "What's the difference between Iqra and her birthday cake? The cake will eventually get lighter! 💪",
                 "Why did Iqra bring a ladder to her birthday party? She heard the drinks were on the house! 🪜",
-                "What do you call Iqra's birthday without cake? A crisis! Call 911! 🚨",
-                "Why doesn't Iqra's age matter? Because she's like a software update - she just gets new features! 📱"
+                "Why doesn't Iqra's age matter? Because she's like a software update - she just gets new features! 📱",
             ];
             
             const jokeBox = document.getElementById('jokeBox');

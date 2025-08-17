@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Iqra! 🎉</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #f9ca24, #ff9ff3, #667eea);
+            background-size: 600% 600%;
+            animation: gradientShift 8s ease infinite;
+            min-height: 100vh;
+            overflow-x: hidden;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><text y="24" font-size="24">🎉</text></svg>'), auto;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            25% { background-position: 100% 50%; }
+            50% { background-position: 100% 100%; }
+            75% { background-position: 0% 100%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            color: white;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            animation: bounce 2s infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+
+        .subtitle {
+            font-size: 1.5em;
+            color: white;
+            margin-bottom: 30px;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .balloon {
+            position: fixed;
+            width: 60px;
+            height: 70px;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            animation: float 4s ease-in-out infinite;
+            cursor: pointer;
+            transition: transform 0.3s;
+            z-index: 10;
+        }
+
+        .balloon:hover {
+            transform: scale(1.2);
+        }
+
+        .balloon::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 60px;
+            background: #333;
+            left: 50%;
+            bottom: -60px;
+            transform: translateX(-50%);
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            25% { transform: translateY(-40px) rotate(5deg); }
+            50% { transform: translateY(-20px) rotate(-3deg); }
+            75% { transform: translateY(-35px) rotate(3deg); }
+        }
+
+        .balloon1 {
+            background: linear-gradient(135deg, #ff6b6b, #ff4757);
+            left: 10%;
+            top: 20%;
+            animation-delay: 0s;
+        }
+
+        .balloon2 {
+            background: linear-gradient(135deg, #4ecdc4, #44a3aa);
+            right: 15%;
+            top: 30%;
+            animation-delay: 1s;
+        }
+
+        .balloon3 {
+            background: linear-gradient(135deg, #f9ca24, #f0b90b);
+            left: 5%;
+            bottom: 20%;
+            animation-delay: 2s;
+        }
+
+        .balloon4 {
+            background: linear-gradient(135deg, #ff9ff3, #ee5a6f);
+            right: 10%;
+            bottom: 30%;
+            animation-delay: 0.5s;
+        }
+
+        .balloon5 {
+            background: linear-gradient(135deg, #54a0ff, #2e86de);
+            left: 50%;
+            top: 10%;
+            animation-delay: 1.5s;
+        }
+
+        .balloon6 {
+            background: linear-gradient(135deg, #48dbfb, #0abde3);
+            right: 30%;
+            bottom: 15%;
+            animation-delay: 2.5s;
+        }
+
+        .surprise-box {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px auto;
+            max-width: 600px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transform: scale(0);
+            animation: popIn 0.5s forwards;
+            animation-delay: 1s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .surprise-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+        }
+
+        @keyframes popIn {
+            to {
+                transform: scale(1);
+            }
+        }
+
+        .fun-fact {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fun-fact:hover {
+            transform: scale(1.05) rotate(1deg);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .fun-fact::before {
+            content: '✨';
+            position: absolute;
+            font-size: 50px;
+            opacity: 0.2;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: sparkle 2s infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { transform: translateY(-50%) scale(1); }
+            50% { transform: translateY(-50%) scale(1.2); }
+        }
+
+        .age-calculator {
+            background: linear-gradient(135deg, #fff, #f0f0f0);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px auto;
+            max-width: 700px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .age-calculator::after {
+            content: '🎈';
+            position: absolute;
+            font-size: 80px;
+            opacity: 0.1;
+            right: 20px;
+            bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .cake {
+            font-size: 100px;
+            text-align: center;
+            animation: wiggle 2s infinite;
+            cursor: pointer;
+            user-select: none;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .cake:hover {
+            transform: scale(1.1);
+        }
+
+        .cake:active {
+            transform: scale(0.95);
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-10deg); }
+            75% { transform: rotate(10deg); }
+        }
+
+        button {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1.1em;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 10px 5px;
+            transition: all 0.3s;
+            font-family: inherit;
+            position: relative;
+            overflow: hidden;
+        }
+
+        button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        button:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: #f9ca24;
+            animation: confettiFall 3s linear infinite;
+        }
+
+        @keyframes confettiFall {
+            to {
+                transform: translateY(100vh) rotate(720deg);
+            }
+        }
+
+        .message-card {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+            padding: 30px;
+            border-radius: 20px;
+            margin: 30px auto;
+            max-width: 600px;
+            color: #333;
+            position: relative;
+            overflow: hidden;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .message-card::before {
+            content: '💝';
+            position: absolute;
+            font-size: 150px;
+            opacity: 0.1;
+            right: -30px;
+            top: -30px;
+            transform: rotate(-15deg);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1) rotate(-15deg); }
+            50% { transform: scale(1.1) rotate(-15deg); }
+        }
+
+        .countdown {
+            font-size: 2em;
+            color: white;
+            text-align: center;
+            margin: 20px 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: colorChange 3s infinite;
+        }
+
+        @keyframes colorChange {
+            0%, 100% { color: white; }
+            33% { color: #ffd700; }
+            66% { color: #ff69b4; }
+        }
+
+        .photo-frame {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, gold, #ff6b6b, #4ecdc4, gold);
+            background-size: 300% 300%;
+            animation: gradientRotate 3s ease infinite;
+            padding: 10px;
+            border-radius: 15px;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        @keyframes gradientRotate {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .photo-frame:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .photo-frame-inner {
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3em;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .reveal-animation {
+            animation: reveal 0.5s forwards;
+        }
+
+        @keyframes reveal {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .name-spotlight {
+            background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientMove 3s ease infinite;
+            font-weight: bold;
+            display: inline-block;
+            transform: scale(1.2);
+        }
+
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .birthday-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #f093fb, #f5576c);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            margin: 20px auto;
+            font-size: 1.2em;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite;
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+            50% { box-shadow: 0 5px 30px rgba(245, 87, 108, 0.6); }
+        }
+
+        .emoji-rain {
+            position: fixed;
+            font-size: 30px;
+            animation: emojifall 4s linear infinite;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        @keyframes emojifall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+
+        .interactive-text {
+            display: inline-block;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .interactive-text:hover {
+            transform: scale(1.2) rotate(5deg);
+            color: #ff6b6b;
+        }
+
+        .dancing-text {
+            animation: dance 1s infinite;
+        }
+
+        @keyframes dance {
+            0%, 100% { transform: translateY(0); }
+            25% { transform: translateY(-10px) rotate(-5deg); }
+            75% { transform: translateY(-10px) rotate(5deg); }
+        }
+
+        .age-button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .fun-facts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .floating-emoji {
+            position: fixed;
+            font-size: 40px;
+            animation: floatAround 10s infinite linear;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        @keyframes floatAround {
+            0% { transform: translate(0, 100vh) rotate(0deg); }
+            25% { transform: translate(30vw, 75vh) rotate(90deg); }
+            50% { transform: translate(50vw, 50vh) rotate(180deg); }
+            75% { transform: translate(80vw, 25vh) rotate(270deg); }
+            100% { transform: translate(100vw, 0) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Floating Balloons (More of them!) -->
+        <div class="balloon balloon1" onclick="popBalloon(this)"></div>
+        <div class="balloon balloon2" onclick="popBalloon(this)"></div>
+        <div class="balloon balloon3" onclick="popBalloon(this)"></div>
+        <div class="balloon balloon4" onclick="popBalloon(this)"></div>
+        <div class="balloon balloon5" onclick="popBalloon(this)"></div>
+        <div class="balloon balloon6" onclick="popBalloon(this)"></div>
+
+        <!-- Floating Emojis -->
+        <div class="floating-emoji" style="left: 10%; animation-delay: 0s;">🎂</div>
+        <div class="floating-emoji" style="left: 30%; animation-delay: 2s;">🎉</div>
+        <div class="floating-emoji" style="left: 50%; animation-delay: 4s;">🎁</div>
+        <div class="floating-emoji" style="left: 70%; animation-delay: 6s;">🎊</div>
+        <div class="floating-emoji" style="left: 90%; animation-delay: 8s;">🎈</div>
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1 class="dancing-text">🎉 HAPPY BIRTHDAY <span class="name-spotlight">IQRA</span>! 🎉</h1>
+            <p class="subtitle">August 28th - The day the world got a little bit more awesome!</p>
+            
+            <!-- Birthday Badge -->
+            <div class="birthday-badge">
+                📅 August 28th = International Iqra Day! 📅
+            </div>
+            
+            <!-- Countdown to birthday -->
+            <div class="countdown" id="countdown"></div>
+        </div>
+
+        <!-- Interactive Cake -->
+        <div class="surprise-box">
+            <div style="text-align: center;">
+                <div class="cake" onclick="blowCandles()">🎂</div>
+                <p style="color: #666; margin-top: 10px;">Click the cake to blow the candles, Iqra!</p>
+                <p id="cakeMessage" style="color: #ff6b6b; font-size: 1.2em; margin-top: 10px;"></p>
+            </div>
+        </div>
+
+        <!-- Fun Facts Section (Expanded!) -->
+        <div class="surprise-box">
+            <h2 style="color: #333; text-align: center; margin-bottom: 20px;">Iqra's Epic Birthday Fun Facts! (Click to Reveal)</h2>
+            <div class="fun-facts-grid">
+                <div class="fun-fact" onclick="showFact(1)" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                    <h3>Fact #1: Iqra's Awesomeness</h3>
+                    <p id="fact1" class="hidden">Breaking: Scientists confirm Iqra's awesomeness has broken all measuring devices! They're calling it the "Iqra Effect"! 🚀</p>
+                </div>
+                <div class="fun-fact" onclick="showFact(2)" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                    <h3>Fact #2: August 28th Powers</h3>
+                    <p id="fact2" class="hidden">Being born on August 28th gives Iqra the superpower to make everyone smile! It's scientifically proven! ✨</p>
+                </div>
+                <div class="fun-fact" onclick="showFact(3)" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                    <h3>Fact #3: The Iqra Rule</h3>
+                    <p id="fact3" class="hidden">On Iqra's birthday, calories fear her, bad vibes avoid her, and good times multiply by infinity! 👑</p>
+                </div>
+                <div class="fun-fact" onclick="showFact(4)" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+                    <h3>Fact #4: Age Mystery</h3>
+                    <p id="fact4" class="hidden">Iqra ages backwards on weekends and holidays. Scientists are still trying to figure this out! 🔬</p>
+                </div>
+                <div class="fun-fact" onclick="showFact(5)" style="background: linear-gradient(135deg, #30cfd0, #330867);">
+                    <h3>Fact #5: Birthday Wish Power</h3>
+                    <p id="fact5" class="hidden">Every birthday wish Iqra makes has a 99.9% success rate. The 0.1% is when she wishes for Monday to disappear! 📅</p>
+                </div>
+                <div class="fun-fact" onclick="showFact(6)" style="background: linear-gradient(135deg, #a8edea, #fed6e3);">
+                    <h3>Fact #6: Iqra's Laugh</h3>
+                    <p id="fact6" class="hidden">Iqra's laugh has been proven to cure Monday blues and make plants grow 50% faster! 🌱😄</p>
+                </div>
+                <div class="fun-fact" onclick="showFact(7)" style="background: linear-gradient(135deg, #ff9a9e, #fecfef);">
+                    <h3>Fact #7: Birthday Cake Law</h3>
+                    <p id="fact7" class="hidden">It's illegal to give Iqra a small piece of cake. Minimum serving size: HUGE! 🍰</p>
+                </div>
+                <div class="fun-fact" onclick="showFact(8)" style="background: linear-gradient(135deg, #ffecd2, #fcb69f);">
+                    <h3>Fact #8: Iqra Time Zone</h3>
+                    <p id="fact8" class="hidden">Iqra operates in IST (Iqra Standard Time): Always 5 minutes late but somehow still on time! ⏰</p>
+                </div>
+                <div class="fun-fact" onclick="showFact(9)" style="background: linear-gradient(135deg, #a1c4fd, #c2e9fb);">
+                    <h3>Fact #9: Dancing Skills</h3>
+                    <p id="fact9" class="hidden">Iqra's dance moves are so unique, they've created a new genre: "Iqra-style" - part graceful, part "what is happening?" 💃</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Iqra's Birthday Roast Machine -->
+        <div class="age-calculator">
+            <h2 style="text-align: center; color: #333; margin-bottom: 20px;">🔥 Iqra's Birthday Roast-O-Matic 🔥</h2>
+            <p style="text-align: center; color: #666; font-size: 1.1em;">Warning: Savage mode activated! Click if you dare, Iqra!</p>
+            <div class="age-button-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 500px; margin: 20px auto;">
+                <button onclick="roastMorning()" style="background: linear-gradient(45deg, #ff6b6b, #ff8e53);">🌅 Morning Iqra</button>
+                <button onclick="roastFood()" style="background: linear-gradient(45deg, #4ecdc4, #44a3aa);">🍕 Hungry Iqra</button>
+                <button onclick="roastSocial()" style="background: linear-gradient(45deg, #f9ca24, #f0b90b);">📱 Social Iqra</button>
+                <button onclick="roastBirthday()" style="background: linear-gradient(45deg, #ff9ff3, #ee5a6f);">🎂 Birthday Iqra</button>
+            </div>
+            <p id="ageResult" style="text-align: center; color: #333; font-size: 1.2em; margin-top: 20px; min-height: 60px;"></p>
+        </div>
+
+        <!-- Photo Frame -->
+        <div class="photo-frame" onclick="changeEmoji(this)">
+            <div class="photo-frame-inner" id="photoEmoji">
+                👸
+            </div>
+        </div>
+        <p style="text-align: center; color: white; margin-top: 10px;">*Click to change Iqra's mood!*</p>
+
+        <!-- Personal Message -->
+        <div class="message-card">
+            <h2 style="margin-bottom: 20px;">A Special Message Just for You 💌</h2>
+            <p style="line-height: 1.8; font-size: 1.1em;">
+                On this special day, I want you to know that you make every day brighter just by being you. 
+                Your smile could power a small city, your laugh is more contagious than yawning, 
+                and your presence makes everything 1000% better!
+            </p>
+            <p style="line-height: 1.8; font-size: 1.1em; margin-top: 15px;">
+                Here's to another year of adventures, inside jokes that nobody else understands, 
+                and me trying to steal your fries (spoiler: I will succeed). 
+            </p>
+            <p style="line-height: 1.8; font-size: 1.1em; margin-top: 15px;">
+                You're not just a year older, you're a year more awesome, a year more beautiful, 
+                and a year closer to getting that senior citizen discount! 😄
+            </p>
+            <p style="text-align: right; margin-top: 20px; font-style: italic;">
+                With all my love and terrible jokes,<br>
+                Your Biggest Fan ❤️
+            </p>
+        </div>
+
+        <!-- Iqra's Special Section -->
+        <div class="surprise-box">
+            <h2 style="text-align: center; color: #333; margin-bottom: 20px;">Why August 28th is Special 🌟</h2>
+            <p style="text-align: center; font-size: 1.1em; color: #666; line-height: 1.8;">
+                August 28th isn't just any day - it's the day Iqra arrived to make the world brighter!<br>
+                Fun fact: People born on August 28th are known to be creative, caring, and have the best sense of humor.<br>
+                Coincidence? We think not! That's 100% Iqra!
+            </p>
+        </div>
+
+        <!-- Interactive Buttons -->
+        <div style="text-align: center; margin: 40px 0;">
+            <button onclick="throwConfetti()">🎊 Iqra Confetti Party!</button>
+            <button onclick="playMusic()">🎵 Play Iqra's Song</button>
+            <button onclick="showSurprise()">🎁 Iqra's Surprise!</button>
+            <button onclick="startEmojiRain()">🌧️ Emoji Rain!</button>
+            <button onclick="partyMode()">🎉 PARTY MODE!</button>
+            <button onclick="showJoke()">😂 Birthday Joke!</button>
+        </div>
+
+        <!-- Hidden Surprise -->
+        <div id="surprise" class="surprise-box hidden">
+            <h2 style="text-align: center; color: #333;">🎁 SURPRISE FOR IQRA! 🎁</h2>
+            <p style="text-align: center; font-size: 1.2em; color: #666; margin: 20px 0;">
+                You've unlocked the secret Iqra vault!
+            </p>
+            <div style="text-align: center; font-size: 2em; margin: 20px 0;">
+                🎈 🎂 🎉 🎊 🎁 💝 🌟
+            </div>
+            <p style="text-align: center; color: #333; line-height: 1.8;">
+                Dear Iqra,<br>
+                You're not just celebrating another year older,<br>
+                you're celebrating another year of being absolutely amazing!<br><br>
+                Remember: Every year you level up, and this year<br>
+                you've unlocked the "Legendary Iqra" achievement! 🏆
+            </p>
+        </div>
+
+        <!-- Joke Display -->
+        <div id="jokeBox" class="surprise-box hidden">
+            <h2 style="text-align: center; color: #333;">😂 Iqra's Birthday Joke 😂</h2>
+            <p id="jokeText" style="text-align: center; font-size: 1.2em; color: #666; margin: 20px 0;"></p>
+        </div>
+    </div>
+
+    <script>
+        // Countdown Timer to August 28th
+        function updateCountdown() {
+            const now = new Date();
+            const currentYear = now.getFullYear();
+            let birthday = new Date(currentYear, 7, 28); // August is month 7 (0-indexed)
+            
+            // If birthday has passed this year, count to next year
+            if (now > birthday) {
+                birthday = new Date(currentYear + 1, 7, 28);
+            }
+            
+            const diff = birthday - now;
+            
+            if (diff > 0) {
+                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                
+                if (days > 0) {
+                    document.getElementById('countdown').innerHTML = 
+                        `⏰ ${days} days, ${hours}h ${minutes}m ${seconds}s until Iqra's Birthday! ⏰`;
+                } else {
+                    document.getElementById('countdown').innerHTML = 
+                        `🎉 IT'S IQRA'S BIRTHDAY! ${hours}h ${minutes}m ${seconds}s of celebration left! 🎉`;
+                }
+            } else {
+                // It's her birthday!
+                document.getElementById('countdown').innerHTML = 
+                    `🎊 TODAY IS THE DAY! HAPPY BIRTHDAY IQRA! 🎊`;
+            }
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Check if it's actually August 28th and trigger special effects
+        function checkBirthday() {
+            const today = new Date();
+            if (today.getMonth() === 7 && today.getDate() === 28) {
+                // It's her birthday! Extra confetti!
+                setTimeout(() => {
+                    throwConfetti();
+                    throwConfetti();
+                    startEmojiRain();
+                }, 1000);
+            }
+        }
+        checkBirthday();
+
+        // Blow Candles Function
+        let cakeClicks = 0;
+        function blowCandles() {
+            const cake = document.querySelector('.cake');
+            const messages = [
+                "Make a wish, Iqra! 🌟",
+                "Woohoo! The candles are blown! 🎉",
+                "Another wish? Iqra's getting greedy! 😄",
+                "That's a lot of wishes, birthday girl! 🎂",
+                "Iqra's wish bank is now full! 💫"
+            ];
+            
+            cake.innerHTML = '🍰';
+            document.getElementById('cakeMessage').innerHTML = messages[Math.min(cakeClicks, messages.length - 1)];
+            cakeClicks++;
+            
+            setTimeout(() => {
+                cake.innerHTML = '🎂';
+            }, 2000);
+            throwConfetti();
+        }
+
+        // Pop Balloon
+        function popBalloon(balloon) {
+            balloon.style.transform = 'scale(0)';
+            throwConfetti();
+            setTimeout(() => {
+                balloon.style.transform = 'scale(1)';
+            }, 3000);
+        }
+
+        // Show Fun Facts
+        function showFact(num) {
+            const fact = document.getElementById(`fact${num}`);
+            fact.classList.toggle('hidden');
+            fact.classList.add('reveal-animation');
+        }
+
+        // Birthday Roast Functions - 4 Categories of Friendly Roasts!
+        function showRoast(message) {
+            document.getElementById('ageResult').innerHTML = "🔥 " + message;
+            const resultBox = document.getElementById('ageResult');
+            resultBox.style.animation = 'none';
+            setTimeout(() => {
+                resultBox.style.animation = 'reveal 0.5s forwards, pulse 2s infinite';
+            }, 10);
+            throwConfetti();
+        }
+
+        function roastMorning() {
+            const roasts = [
+                "🌅 Iqra's morning routine: Set 10 alarms, snooze 11 times, wake up at noon, call it 'morning'. Time is just a social construct anyway! ⏰😴",
+                "🌅 Breaking: Iqra's definition of 'early morning' has been officially changed to 11:59 AM. The sun adjusts its schedule for her! ☀️",
+                "🌅 Scientists study Iqra to understand how someone can be 'just 5 more minutes' for 3 hours straight. Nobel Prize in Time Bending! 🛏️",
+                "🌅 Iqra's alarm clock filed for emotional abuse - it screams every morning but she just doesn't care! Savage! 📱😭"
+            ];
+            showRoast(roasts[Math.floor(Math.random() * roasts.length)]);
+        }
+
+        function roastFood() {
+            const roasts = [
+                "🍕 Iqra's relationship status with food: 'It's complicated'... by complicated she means she loves everything edible! No food is safe! 🍔❤️",
+                "🍕 Breaking: Local restaurants have Iqra's photo on the wall - not as customer of the month, but as 'Hide the free samples, she's coming!' 🏃‍♀️",
+                "🍕 Iqra's fitness journey: She runs... to the fridge. She does crunches... on chips. She lifts... forks to her mouth. Athletic queen! 💪🍰",
+                "🍕 Scientists can't explain how Iqra can be 'too full' but still have room for dessert. Her stomach defies laws of physics! 🎂🔬"
+            ];
+            showRoast(roasts[Math.floor(Math.random() * roasts.length)]);
+        }
+
+        function roastSocial() {
+            const roasts = [
+                "📱 Iqra takes 100 selfies to post 1, then deletes it after 5 minutes because 'the lighting was weird'. Photography is hard! 🤳😅",
+                "📱 Breaking: Iqra responds to texts in 3-5 business days with 'Sorry just saw this!' - She saw it immediately, just forgot! 💬",
+                "📱 Iqra's social battery: 100% for 10 minutes, then suddenly needs to go home and watch Netflix. Introvert in extrovert's clothing! 📺",
+                "📱 WhatsApp shows Iqra 'online' at 3 AM but she'll claim she was sleeping. The phone was sleep-scrolling apparently! 👻"
+            ];
+            showRoast(roasts[Math.floor(Math.random() * roasts.length)]);
+        }
+
+        function roastBirthday() {
+            const roasts = [
+                "🎂 Iqra on her birthday: 'I don't want to make a big deal' *proceeds to remind everyone 47 times that it's her birthday* Subtle! 🎉",
+                "🎂 Breaking: Iqra celebrates her birthday for 30 days straight - it's called 'Birthday Month' and yes, she invented it! 📅👑",
+                "🎂 Iqra blowing candles: Takes deep breath like she's about to swim across the ocean. Fire department on standby! 🚒💨",
+                "🎂 Plot twist: Iqra cuts the cake before singing ends because 'priorities'. The song is optional, cake is mandatory! 🍰🎵"
+            ];
+            showRoast(roasts[Math.floor(Math.random() * roasts.length)]);
+        }
+
+        // Change Photo Frame Emoji
+        const emojis = ['👸', '🥳', '😎', '🤩', '😍', '🎭', '🦄', '✨', '💃', '🌟'];
+        let emojiIndex = 0;
+        function changeEmoji(frame) {
+            emojiIndex = (emojiIndex + 1) % emojis.length;
+            document.getElementById('photoEmoji').innerHTML = emojis[emojiIndex];
+            frame.style.transform = 'scale(1.2) rotate(360deg)';
+            setTimeout(() => {
+                frame.style.transform = 'scale(1) rotate(0deg)';
+            }, 500);
+        }
+
+        // Throw Confetti
+        function throwConfetti() {
+            for (let i = 0; i < 50; i++) {
+                createConfettiPiece();
+            }
+        }
+
+        function createConfettiPiece() {
+            const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#f9ca24', '#ff9ff3', '#667eea', '#feca57'];
+            const shapes = ['❤️', '⭐', '🎈', '🎉', '✨', '💖', '🎊'];
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            if (Math.random() > 0.5) {
+                confetti.innerHTML = shapes[Math.floor(Math.random() * shapes.length)];
+                confetti.style.fontSize = '20px';
+                confetti.style.background = 'transparent';
+            } else {
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+            }
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            confetti.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(confetti);
+            
+            setTimeout(() => {
+                confetti.remove();
+            }, 5000);
+        }
+
+        // Start Emoji Rain
+        function startEmojiRain() {
+            const emojis = ['🎂', '🎉', '🎈', '🎁', '🎊', '💝', '🌟', '🎀', '🍰', '🥳'];
+            for (let i = 0; i < 30; i++) {
+                setTimeout(() => {
+                    const emoji = document.createElement('div');
+                    emoji.className = 'emoji-rain';
+                    emoji.innerHTML = emojis[Math.floor(Math.random() * emojis.length)];
+                    emoji.style.left = Math.random() * 100 + '%';
+                    emoji.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                    emoji.style.animationDelay = Math.random() * 2 + 's';
+                    document.body.appendChild(emoji);
+                    
+                    setTimeout(() => {
+                        emoji.remove();
+                    }, 6000);
+                }, i * 100);
+            }
+        }
+
+        // Party Mode
+        let partyInterval;
+        let partyActive = false;
+        function partyMode() {
+            if (!partyActive) {
+                partyActive = true;
+                partyInterval = setInterval(() => {
+                    throwConfetti();
+                    document.body.style.filter = `hue-rotate(${Math.random() * 360}deg)`;
+                }, 500);
+                
+                setTimeout(() => {
+                    clearInterval(partyInterval);
+                    document.body.style.filter = 'none';
+                    partyActive = false;
+                }, 5000);
+                
+                alert('🎉 PARTY MODE ACTIVATED FOR 5 SECONDS! 🎉\nHold on to your cake, Iqra!');
+            }
+        }
+
+        // Play Music (Visual Effect)
+        function playMusic() {
+            const notes = ['🎵', '🎶', '🎼', '🎤', '🎸', '🎹', '🎺', '🎷', '🥁'];
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const note = document.createElement('div');
+                    note.innerHTML = notes[Math.floor(Math.random() * notes.length)];
+                    note.style.position = 'fixed';
+                    note.style.left = Math.random() * window.innerWidth + 'px';
+                    note.style.top = Math.random() * window.innerHeight + 'px';
+                    note.style.fontSize = '30px';
+                    note.style.animation = 'fadeIn 2s';
+                    note.style.pointerEvents = 'none';
+                    note.style.zIndex = '1000';
+                    document.body.appendChild(note);
+                    
+                    setTimeout(() => {
+                        note.remove();
+                    }, 2000);
+                }, i * 100);
+            }
+            alert('🎵 Now playing: "Happy Birthday, Dear Iqra!" 🎵\n(The remix version with extra sparkles and bass drop!)');
+        }
+
+        // Show Birthday Joke
+        function showJoke() {
+            const jokes = [
+                "Why does Iqra never forget her birthday? Because it's the one day she can act her shoe size, not her age! 👠",
+                "What's Iqra's favorite kind of birthday music? Heavy metal... because of all those candles! 🕯️😂",
+                "Why did Iqra's birthday cake go to therapy? It was having too many layers of emotions! 🎂😭",
+                "What did one of Iqra's birthday candles say to the other? 'Don't birthdays just burn you up?' 🔥",
+                "Why is Iqra like a fine wine? She gets better with age, but also gives everyone headaches the next day! 🍷",
+                "What's the difference between Iqra and her birthday cake? The cake will eventually get lighter! 💪",
+                "Why did Iqra bring a ladder to her birthday party? She heard the drinks were on the house! 🪜",
+                "What do you call Iqra's birthday without cake? A crisis! Call 911! 🚨",
+                "Why doesn't Iqra's age matter? Because she's like a software update - she just gets new features! 📱",
+                "What's Iqra's secret to staying young? She counts her age in dog years... backwards! 🐕"
+            ];
+            
+            const jokeBox = document.getElementById('jokeBox');
+            const jokeText = document.getElementById('jokeText');
+            
+            jokeText.innerHTML = jokes[Math.floor(Math.random() * jokes.length)];
+            jokeBox.classList.remove('hidden');
+            jokeBox.scrollIntoView({ behavior: 'smooth' });
+            
+            throwConfetti();
+        }
+
+        // Show Surprise
+        function showSurprise() {
+            const surprise = document.getElementById('surprise');
+            surprise.classList.remove('hidden');
+            surprise.scrollIntoView({ behavior: 'smooth' });
+            throwConfetti();
+            startEmojiRain();
+        }
+
+        // Initial confetti burst
+        setTimeout(() => {
+            throwConfetti();
+        }, 2000);
+
+        // Random floating balloon movement
+        setInterval(() => {
+            const balloons = document.querySelectorAll('.balloon');
+            balloons.forEach(balloon => {
+                if (Math.random() > 0.8) {
+                    balloon.style.animationDuration = (Math.random() * 3 + 2) + 's';
+                }
+            });
+        }, 3000);
+    </script>
